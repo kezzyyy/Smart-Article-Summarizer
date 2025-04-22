@@ -13,7 +13,34 @@
   };
 </script>
 
-<h2 class="text-xl font-semibold mb-2">New Article</h2>
-<input bind:value={title} placeholder="Title" class="input input-bordered w-full mb-2" />
-<textarea bind:value={content} placeholder="Content" class="textarea textarea-bordered w-full mb-2" rows="8"></textarea>
-<button class="btn btn-success" on:click={save}>Save Article</button>
+<div class="min-h-screen bg-gray-50 py-10 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md">
+    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">New Article</h2>
+
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-700 mb-1">Title</label>
+      <input
+        bind:value={title}
+        placeholder="Enter the title"
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+
+    <div class="mb-6">
+      <label class="block text-sm font-medium text-gray-700 mb-1">Content</label>
+      <textarea
+        bind:value={content}
+        placeholder="Write your article content here..."
+        rows="8"
+        class="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      ></textarea>
+    </div>
+
+    <button
+      on:click={save}
+      class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition"
+    >
+      Save Article
+    </button>
+  </div>
+</div>
